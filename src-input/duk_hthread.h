@@ -12,8 +12,8 @@
  *  Stack constants
  */
 
-#define DUK_VALSTACK_INITIAL_SIZE       128     /* roughly 1.0 kiB */
-#define DUK_VALSTACK_INTERNAL_EXTRA     64      /* internal extra elements assumed on function entry,
+#define DUK_VALSTACK_INITIAL_SIZE       96      /* roughly 0.6 kiB */
+#define DUK_VALSTACK_INTERNAL_EXTRA     32      /* internal extra elements assumed on function entry,
                                                  * always added to user-defined 'extra' for e.g. the
                                                  * duk_check_stack() call.
                                                  */
