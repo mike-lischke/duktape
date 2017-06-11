@@ -31,8 +31,7 @@ static duk_ret_t test_nrets_too_large(duk_context *ctx, void *udata) {
 	printf("top before: %ld\n", (long) duk_get_top(ctx));
 
 	/* Here 'nrets' is too large, beyond the current value stack
-	 * reserve.  (This succeeds in Duktape 2.1 and prior because
-	 * the implementation did a reserve check.)
+	 * reserve.
 	 */
 	rc = duk_safe_call(ctx, dummy, NULL, 2 /*nargs*/, 1024 /*nrets, too large*/);
 	printf("duk_safe_call rc: %ld\n", (long) rc);
